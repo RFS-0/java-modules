@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    // plugin to facilitate integration of gradle modules with java modules
+    // id 'org.javamodularity.moduleplugin' version '1.6.0'
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+}

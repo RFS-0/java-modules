@@ -1,0 +1,5 @@
+include 'user-domain'
+include 'user-service'
+include 'user-service-provider-1'
+include 'user-service-provider-2'
+include 'user-service-consumer'
