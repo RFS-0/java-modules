@@ -119,17 +119,23 @@ To achieve this we execute the following steps:
 
 ---
 
-# Migrate to JDK 14
+# 2. Migrate to JDK 14
 
-* Update the Gralde JVM to JDK 14
-* Set `sourceCompatibility` and `targetCompatibility` to 
+* Update the Gradle JVM to JDK 14
+* Set `sourceCompatibility` and `targetCompatibility` to `JavaVersion.VERSION_14`
+* Apply the `org.javamodularity.moduleplugin` gradle plugin to make sure modularized gradle modules get put on 
+the module path
+* Refactor the `printClasspath` method to `printModulepath` in order to conform to the new JDK's requirements
+* Run the application -> behaves exactly as before since module path is not used yet
 
 ---
 
-* Since we have control over all the source code our project relies on, we decide to apply bottom-up migration approach
-with named modules
-* If we do not have control over all the source code we rely on we use automatic modules instead of named modules 
-                                                                                   
+# 3. Execute bottom up migration: Modularize user domain module
+
+* Add `module-info.java` to [java folder](user-domain/src/main/java) of `user-domain` module
+
+---
+                                                                           
 ---
 
 # Appendix
