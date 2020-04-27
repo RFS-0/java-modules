@@ -11,5 +11,4 @@ dependencies {
     implementation project(':user-domain')
     // depending on the ordering of the dependencies either UserServiceImpl of module 1 or 2 is shadowed
     implementation project(':user-service-provider-1')
-    implementation project(':user-service-provider-2')
 }
