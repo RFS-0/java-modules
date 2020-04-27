@@ -1,4 +1,4 @@
-package ch.resrc.consumers.user;
+package ch.resrc.providers.user;
 
 import ch.resrc.domain.user.User;
 import ch.resrc.services.user.UserService;
@@ -9,14 +9,15 @@ import java.util.Map;
 import java.util.Set;
 
 public class UserServiceImpl implements UserService {
+
     private static final Map<String, User> USER_MAP = initializeUsers();
 
     private static Map<String, User> initializeUsers() {
         HashMap<String, User> userMap = new HashMap<>();
-        userMap.put("Hugh@Davis", new User("Hugh@Davis", "Hugh", "Davis", "pw5"));
-        userMap.put("Carolyn@Rudzik", new User("Carolyn@Rudzik", "Carolyn", "Rudzik", "pw6"));
-        userMap.put("Alyce@Adams", new User("Alyce@Adams", "Alyce", "Adams", "pw7"));
-        userMap.put("Derrick@Hill", new User("Derrick@Hill", "Derrick", "Hill", "pw8"));
+        userMap.put("Craig@Mooneyham", new User("Craig@Mooneyham", "Craig", "Mooneyham", "pw1"));
+        userMap.put("Regina@Adams", new User("Regina@Adams", "Regina", "Adams", "pw2"));
+        userMap.put("Jeff@Stephens", new User("Jeff@Stephens", "Jeff", "Stephens", "pw3"));
+        userMap.put("Mary@Stone", new User("Mary@Stone", "Mary", "Stone", "pw4"));
         return userMap;
     }
 
