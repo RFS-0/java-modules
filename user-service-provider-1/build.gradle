@@ -2,7 +2,7 @@ test {
     useJUnitPlatform()
 
     moduleOptions {
-        runOnClasspath = true
+        //runOnClasspath = true
     }
 
     doLast {
